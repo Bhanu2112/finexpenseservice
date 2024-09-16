@@ -2,6 +2,7 @@ package com.org.bhanu.expenseservice.entity.split;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -26,9 +27,8 @@ public class Comment {
 	private String message;
 	
 	
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="group_id")
-	private Group group;
+
+	@Column(name="group_id")
+	private Long groupId;
 
 }

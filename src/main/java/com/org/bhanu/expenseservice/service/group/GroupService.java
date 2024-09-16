@@ -107,7 +107,7 @@ public class GroupService {
 
 	public Group findGroup(Long groupId) {
 		Group group = groupRepository.findById(groupId).get();
-		group.setComments(getComments(group.getId()));
+		
 		return group;
 	}
 

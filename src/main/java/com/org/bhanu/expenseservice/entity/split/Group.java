@@ -44,9 +44,7 @@ public class Group {
 	private int payedMembers;
 	
 	private String grpPurpose;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<Comment> comments;
+
 	
 	
 	
