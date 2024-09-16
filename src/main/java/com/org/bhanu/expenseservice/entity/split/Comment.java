@@ -13,6 +13,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.Column;
 
 @Data
 @AllArgsConstructor
@@ -26,9 +27,8 @@ public class Comment {
 	private String message;
 	
 	
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="group_id")
-	private Group group;
+	
+	@Column(name="group_id")
+	private Group groupId;
 
 }
