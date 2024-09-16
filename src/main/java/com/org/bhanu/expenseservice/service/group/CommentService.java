@@ -21,7 +21,7 @@ public class CommentService {
 		Group group = new Group();
 		group.setId(groupId);
 		comment.setMessage(msg);
-		comment.setGroup(group);
+		comment.setGroupId(groupId);
 		return commentRepository.save(comment);
 	}
 	
